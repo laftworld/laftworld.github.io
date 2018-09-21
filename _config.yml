@@ -98,3 +98,5 @@ service-worker: true
 
 # Friends
 remote_theme : qiubaiying/qiubaiying.github.io
+
+theme: jekyll-theme-slate
