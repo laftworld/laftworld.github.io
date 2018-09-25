@@ -103,8 +103,8 @@ analytics:
 author:
   name             : "Won Eui Hong"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : ""
-  location         : "Somewhere"
+  bio              : "Learning to Learn"
+  location         : "Room D, 502, University Apartments Tower B, The Hong Kong University of Science and Technology(HKUST), Clear Water Bay, Kowloon, Hong Kong"
   email            :
   links:
     - label: "Email"
@@ -121,10 +121,10 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+       url: "https://github.com/laftworld"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+       url: "https://instagram.com/pattern_of_days"
 
 # Site Footer
 footer:
