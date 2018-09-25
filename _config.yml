@@ -121,10 +121,10 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-       url: "https://github.com/laftworld"
+		# url: "https://github.com/laftworld"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-       url: "https://instagram.com/pattern_of_days"
+#url: "https://instagram.com/pattern_of_days"
 
 # Site Footer
 footer:
