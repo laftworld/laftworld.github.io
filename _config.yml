@@ -105,7 +105,7 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Learning to Learn"
   location         : "HKUST"
-  email            :
+  email            : "wehong@cse.ust.hk"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -118,13 +118,13 @@ author:
       # url: "https://twitter.com/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-       url: "https://facebook.com/woneui.hong"
+# url: "https://facebook.com/woneui.hong"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-       url: "https://github.com/laftworld"
+# url: "https://github.com/laftworld"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/pattern_of_days"
+# url: "https://instagram.com/pattern_of_days"
 
 # Site Footer
 footer:
