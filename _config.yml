@@ -8,7 +8,7 @@ description: A blog about learning, machine learning and human learning
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/profile1.png
+picture: assets/images/logo.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
