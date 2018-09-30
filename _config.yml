@@ -8,13 +8,13 @@ description: A blog about learning, machine learning and human learning
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/profile1.jpg
+picture: assets/images/profile1.png
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
 resume: true
 resume-external: true
-resume-url: https://google.com/?q=my+resume
+resume-url: https://docs.google.com/document/d/10kHEZUj7TXsEZYHSA2q1F4cXoQdQ7Z154trJGUdZe_g/edit?usp=sharing
 
 url: https://laftworld.github.io
 # your url: http://USERNAME.github.io
@@ -30,25 +30,25 @@ permalink: /:title/
 
 # if you don't want comments in your posts, leave categories empty
 disqus:
-  shortname: mydisqus # enter this from your disqus account
+  shortname: woneuihong# enter this from your disqus account
   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: https://www.facebook.com/woneui.hong
-twitter: https://twitter.com/laftworld 
+facebook: woneui.hong
+twitter: laftworld 
 # google: mygoogle
-instagram: https://www.instagram.com/pattern_of_days
+instagram: pattern_of_days
 # pinterest: mypinterest
-linkedin: https://www.linkedin.com/in/woneui-hong-1a0625b4/ 
-youtube: https://www.youtube.com/channel/UCxtWc6MPoiPaP62UCUClqPA
+linkedin: woneui-hong-1a0625b4 
+youtube: channel/UCxtWc6MPoiPaP62UCUClqPA
 # spotify: myspotify
-github: https://github.com/laftworld
+github: laftworld
 # gitlab: mygitlab
 # lastfm: mylastfm
 # stackoverflow: 7044681/mystackoverflow
 # quora: userquora
 # reddit: username
-medium: https://medium.com/@woneuihong/
+medium: @woneuihong/
 # vimeo: myvimeo
 # lanyrd: mylanyrd
 email: wehong@cse.ust.hk 
