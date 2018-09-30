@@ -1,6 +1,9 @@
 ---
 title: New blog in Github.io
+layout: post
 date: 2018-09-25 22:25:00 +0800
+category: blog
+author: laftworld
 ---
 I am a PhD student of Computer Science and Engineering at HKUST (Hong Kong University of Science and Technology). 
 
