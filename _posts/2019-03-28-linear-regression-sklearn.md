@@ -1,4 +1,10 @@
-
+---
+title: linear regression
+layout: post
+date: 2019-03-28 10:41:00 +0800
+category: blog
+author: laftworld
+---
 
 ```python
 import matplotlib.pyplot as plt
