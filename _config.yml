@@ -24,4 +24,4 @@ email: wehong@cse.ust.hk
 # googleAnalitycsID: UA-83933844-1
 
 # Remote theme
-remore_theme : portfolio-central/jekyll-instagram-portfolio-theme
+remote_theme: portfolio-central/jekyll-instagram-portfolio-theme
