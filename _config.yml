@@ -1,13 +1,13 @@
 # Site settings
 # in the templates available like {{ site.myvariable }}.
-title: One-page learning
-email: wehong@cse.ust.hk
-brand: One-page learning
+title: Clean portfolio theme for Jekyll powered by Bootstrap 4.
+email: your-email@domain.com
+brand: Your Name
 headline: Inventor, Engineer and Futurist
 description: > # this means to ignore newlines until "baseurl:"
   New Site
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://laftworld.github.io" # the base hostname & protocol for your site
+url: "http://example.com" # the base hostname & protocol for your site
 copyright: 2016 Whatever Company, Inc. All Rights Reserved.
 
 # Build settings
@@ -17,11 +17,9 @@ markdown: kramdown
 snapwidget: 247552
 
 # Contacts
-email: wehong@cse.ust.hk
-# phone: +852-6991-7248
+email: your.name@gmail.com
+phone: +1-800-555-2016
 
 # Tracking
-# googleAnalitycsID: UA-83933844-1
+googleAnalitycsID: UA-83933844-1
 
-# Remote theme
-remote_theme: portfolio-central/jekyll-instagram-portfolio-theme
