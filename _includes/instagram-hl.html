@@ -12,15 +12,12 @@
 {% endraw %}
 </script>
 
-
-
-
 <script type="text/javascript">
 //jhvanderschee
     var feed = new Instafeed({
         get: 'user',
         userId: '{{ include.userId }}',
-        limit: '5',
+        limit: '4',
         sortBy: 'most-recent',
         resolution: 'standard_resolution',
         accessToken: '{{ include.accessToken }}',
