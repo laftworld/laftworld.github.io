@@ -4,11 +4,25 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Won Eui Eric HONG is a PhD student in computer science and engineering, Hong Kong University of Science and Technology) (HKUST).
+
+[Facebook]()
+[Naver blog]()
+[One page machine learning (Korean)]()
+[Instagram]()
+[Youtube]()
+[Brunch]()
+
+
+
 
 You can find the source code for Jekyll at GitHub:
 [jekyll][jekyll-organization] /
