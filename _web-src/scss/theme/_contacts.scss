@@ -1,9 +1,11 @@
 // Block: container-contacts
 
+
 .container-contacts {
-  margin-top: $spacer;
-  padding-top: $spacer;
-  min-height: $spacer * 15;
+  //margin-top: $spacer;
+  //padding-top: $spacer;
+  //min-height: $spacer * 15;
+  padding: $spacer 0 $spacer 0;
   background: $theme-color-main;
   color: darken($theme-color-main, 50%);
 
