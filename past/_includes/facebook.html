@@ -1,0 +1,38 @@
+<section class="container container-facebook">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Wanna be a friend?</h1>
+        </div>
+        <div class="col-md-12">
+            <!-- Generate such a widget at snapwidget.com for your name -->
+            <!-- Copy/paste code here or just update the snapwidget value at _config.yml -->
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '399956070559482',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v3.2'
+    });
+
+    FB.AppEvents.logPageView();
+
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+            <script src="https://snapwidget.com/js/snapwidget.js"></script>
+            <iframe src="https://snapwidget.com/embed/{{ site.snapwidget_facebook }}" class="snapwidget-widget" allowTransparency="true"
+                    frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
+        </div>
+    </div>
+</section>
