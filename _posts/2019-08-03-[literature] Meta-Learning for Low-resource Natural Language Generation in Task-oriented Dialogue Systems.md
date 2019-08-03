@@ -51,10 +51,12 @@ To show Meta-NLG is more useful for the task.
 Meta-NLG
 
 ### Q) What is the main figure? What is the main point of it?
+
 They applied MAML (model-agnostic meta-learning) onto low-resource NLG task.
+
 |   ![meta-learning-low-resource](https://github.com/laftworld/laftworld.github.io/blob/master/img/figures/r1/main.png?raw=true){:height="300px" width="450px"}      |      
 |:------:|
-| * Comparing meta-learning (Meta) to Multi-task learning (MTL) * |
+| **Comparing meta-learning (Meta) to Multi-task learning (MTL)** |
 
 ### Q) What is the contribution of this paper?
 They applied MAML (model-agnostic meta-learning) onto low-resource NLG task.
@@ -103,13 +105,13 @@ Unknown.
 
 ### Q) Suggest the main formulation.
 
-\\[
+$$
 \theta^{Meta} = MetaLearn(\mathcal{T}_1, \ldots, \mathcal{T}_K) = \argmax_\theta \mathbb{E}_i\mathbb{E}_{\mathcal{D}_{\mathcal{T}_i}, \mathcal{D}_{\mathcal{T}_i^{\prime}}}(f_{\theta_i^{\prime}})
-\\]
+$$
 
-\[
+$$
 \theta^{\prime}_i = Adapt(\mathcal{D_{\mathcal{T}_i}, \theta}) = \theta-\alpha\nabla_\theta\mathcal{L}_{\mathcal{D}_{\mathcal{T}_i}}(f_\theta)
-\]
+$$
 
 ### Q) What are the limitations of the model?
 Task-oriented dialogue is severely restricted by its definition.
