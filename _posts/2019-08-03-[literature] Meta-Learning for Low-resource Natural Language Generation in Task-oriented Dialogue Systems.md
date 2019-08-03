@@ -103,9 +103,9 @@ Unknown.
 
 ### Q) Suggest the main formulation.
 
-\[
+\\[
 \theta^{Meta} = MetaLearn(\mathcal{T}_1, \ldots, \mathcal{T}_K) = \argmax_\theta \mathbb{E}_i\mathbb{E}_{\mathcal{D}_{\mathcal{T}_i}, \mathcal{D}_{\mathcal{T}_i^{\prime}}}(f_{\theta_i^{\prime}})
-\]
+\\]
 
 \[
 \theta^{\prime}_i = Adapt(\mathcal{D_{\mathcal{T}_i}, \theta}) = \theta-\alpha\nabla_\theta\mathcal{L}_{\mathcal{D}_{\mathcal{T}_i}}(f_\theta)
