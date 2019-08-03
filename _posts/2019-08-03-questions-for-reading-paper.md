@@ -14,7 +14,7 @@ categories: research
 #### Basic information
 ###### Q) Bibliography
 ###### Q) Link
-###### Q) Cited by
+###### Q) Citation
 
 #### Motivation
 ###### Q) What is the domain this paper is in?
@@ -60,3 +60,10 @@ categories: research
 ###### Q) Is any change to the algorithm needed for the (NLP, vision, speech) application?
 ###### Q) Is this the only way to solve the problem?
 ###### Q) Is the work applicable to the Question Answering task?
+
+
+<!---
+|        |           |
+|:-------------:|:-------------:|
+| *a*  | *b*      |
+--->
