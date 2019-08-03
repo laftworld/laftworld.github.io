@@ -59,13 +59,10 @@ formular = input('수식 입력: ')
 ops = split_ops(formular)
 
 # 우선순위 계산 **, *, /, +, -
-ops = run(ops, "**")
-ops = run(ops, "*", "/")
+ops = run(ops, '**')
+ops = run(ops, '*', '/')
 ops = run(ops, "+", "-")
 
 print(f"계산결과는 {ops}")
 
 {% endhighlight %}
-
-Check out the [Jekyll docs][blog]
-[blog]: https://laftworld.github.io
