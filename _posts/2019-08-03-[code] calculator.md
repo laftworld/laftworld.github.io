@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "[Code] calculator"
 date:   2019-08-03 15:51:00 +0800
 categories: code
 ---
