@@ -2,6 +2,13 @@
 
 ## Contents
 
+**[DLV-NLG]** Tran, Van-Khanh, and Le-Minh Nguyen. "Dual latent variable model for low-resource natural language generation in dialogue systems." arXiv preprint arXiv:1811.04164 (2018). [[Link]](https://arxiv.org/pdf/1811.04164.pdf)
+
+**[Fluency boost learning]** Ge, Tao, Furu Wei, and Ming Zhou. "Fluency boost learning and inference for neural grammatical error correction." Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). 2018. [[Link]](https://www.aclweb.org/anthology/P18-1097)
+
+**[Text content manipulation]** Wang, Wentao, et al. "Toward Unsupervised Text Content Manipulation." arXiv preprint arXiv:1901.09501 (2019). [[Link]](https://arxiv.org/pdf/1901.09501.pdf)
+
+**[Attribute control]** Logeswaran, Lajanugen, Honglak Lee, and Samy Bengio. "Content preserving text generation with attribute controls." Advances in Neural Information Processing Systems. 2018.[[Link]](https://papers.nips.cc/paper/7757-content-preserving-text-generation-with-attribute-controls.pdf)
 
 **[MAML]** Finn, Chelsea, Pieter Abbeel, and Sergey Levine. "Model-agnostic meta-learning for fast adaptation of deep networks." Proceedings of the 34th International Conference on Machine Learning-Volume 70. JMLR. org, 2017. [[Link]](https://arxiv.org/pdf/1703.03400.pdf)
 
