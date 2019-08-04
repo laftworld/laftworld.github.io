@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[literature] Meta-Learning for Low-resource Natural Language Generation in Task-oriented Dialogue Systems"
+title: "[literature] Deep meta-learning: Learning to learn in the concept space"
 date: 2019-08-04 09:18:00 +0800
 categories: research
 ---
@@ -39,186 +39,174 @@ N-way K-shot image recognition.
 Yes they are different. Image recognition task is to figure out an object from an image which contains multiple objects, while classification task is to put an target image into corresponding bucket.
 
 ### Q) Suggest the running example. What is the main point of the task?
-![Running example](https://github.com/laftworld/laftworld.github.io/blob/master/img/figures/r1/running-example.png?raw=true)
-*Running example*
-The main point of the task is to recognize an image which is similar to pre-labeled images.
+
+|  ![Running example](/img/figures/zhou2018deep-running-example.png)      |
+|:-------------:|
+| *Running example*  |
+
+The main point of the task is to recognize an image which is similar to pre-labeled images. However, the main point of the paper is meta-learning in concept space.
 
 ### Q) What is the limitation of the previous works?
-Conventional methods using hand-crafted rules often generates monotonic utterances and __it requires a substantial amount
-of human engineering work__. Recently, various neural approaches [Wen et al., 2015c; Tran and Nguyen, 2017; Tseng et al., 2018] have been proposed to generate accurate, natural and diverse utterances. However, __these methods are typically developed for particular domains__. Moreover, \emph{they are often data-intensive to train}. __The high annotation cost prevents developers to build their own NLG component from scratch__.
-
-### Q) What is the objective of this paper? (to review / to prove / to supplement / to show)
-To show Meta-NLG is more useful for the task.
+The full potential of the previous works is still far from reach. For example, the accuracy of 5-way 5-shot recognition of natural images is around 60% despite humans surpass 90% with ease. They argue that this is __due to the lack of a good data representation__ for meta-learning.
 
 ### Q) What is the term this work is called (suggest abbreviation, if exists)?
-Meta-NLG
+DEML+Meta-SGD. DEML refers to deep meta-learning.
+
+### Q) What is the objective of this paper? (to review / to prove / to supplement / to show)
+To show the concept space representation increases the acc.
 
 ### Q) What is the main figure? What is the main point of it?
 
 They applied MAML (model-agnostic meta-learning) onto low-resource NLG task.
 
-|   ![meta-learning-low-resource](https://github.com/laftworld/laftworld.github.io/blob/master/img/figures/r1/main.png?raw=true){:height="300px" width="450px"}      |      
+|   ![Main-figure](/img/figures/zhou2018deep-main-figure.png){:height="300px" width="450px"}      |      
 |:------:|
-| **Comparing meta-learning (Meta) to Multi-task learning (MTL)** |
+| Figure 1: Deep meta-learning: learning to learn in the concept space. The concept generator learns to extract concept-level representations to ease meta-learning, while being enhanced by the concept discriminator that recognizes the concepts. |
 
 ### Q) What is the contribution of this paper?
-They applied MAML (model-agnostic meta-learning) onto low-resource NLG task.
+They proposed the concept space representation, which is good for learning-to-learn by increasing the data-effeciency.
 
 ## Background
-### Q) What kind of attempts was there to solve the same problem?
-To solve the low-resource NLG task,
-* simple data augmentation trick [Wen et al., 2016a]
-* specialized model architectures, including conditional variational auto-encoders (CVAEs, [Tseng et al., 2018; Tran and Nguyen, 2018a; Tran and Nguyen, 2018b])
-* adversarial domain adaptation critics [Tran and Nguyen, 2018a]
-have been proposed to learn domain-invariant representations.
+### Q) What kind of attempts were there to solve the same problem?
+There were many papers which try to increase the data- efficiency of the meta-learning. There might be some papers to resolve the workload for learning tasks, however, this paper does not introduces the trials of the same objective. Anyway, this paper is the first attempt to introduce the concept space in meta-learning.
 
-There are three categories of meta-learning methods:
-* Metric-based: Siamese Network, Matching Network, Memory-augmented Neural Network, Prototype Net, Relation Network.
-* Model-based: meta-learner based on LSTMs. Hypernetwork, MetaNet, TCML, etc.
-* Optimization-based: Model-agnostic meta-learning (MAML)
+*  (Li et al., 2006) present a Bayesian model for learning categories from a few examples per category.
+
+* (Salakhutdinov et al., 2012) organize seen categories into super-categories to derive hierarchically structured priors for new categories using a hierarchical Bayesian model.
+
+*  (Lake et al., 2011) develop a generative model that composes pen strokes into characters for handwritten character recognition
+
+* (Wong & Yuille, 2015) extend this idea to natural images without relying on domain knowledge.
+
+* (Bertinetto et al., 2016) suggest a feed-forward learner for learning deep neural networks to address the overfitting for few-shot learning
+
+* (Hariharan & Girshick, 2016) generate dummy examples for the task of interest by using the geometric transformations inferred from existing examples of other categories.
+
+*  Recently, (Xu et al., 2017) show a key-value memory networks for fewshot learning, which is not scalable due to the huge memory size and the heavy cost in memory retrieval.
+
+* Other methods use metric learning to ease pairwise comparison between examples (Fink, 2005; Koch, 2015; Guillaumin et al., 2009; Schroff et al., 2015)
 
 ### Q) What is the limitation of the previous works?
-Datasets used by these methods are simple which tend to enumerate many slots and values in an utterance without many linguistic variations. As a consequence, over-fitting the slots and values in the low-resource target domain could even outperform those versions trained with rich source domain examples [Tran and Nguyen, 2018b].
+Few-shot learning remains challenging for metalearning that learns a learning algorithm (metalearner) from many related tasks.
+
+Few-shot learning is inherently challenging in the complicated instance space, where a few examples are insufficient
+to describe the intended high-level information such as categories or concepts.
+
+Current few-shot learning is complicated and heavy to learn.
 
 ### Q) Which paper is the most similar one? Why is that?
-(Tran and Nguyen, 2018b) Van-Khanh Tran and Le-Minh Nguyen. Dual latent variable model for low-resource natural language generation in dialogue systems. In Proceedings of the 22nd Conference on Computational Natural Language Learning, pages 21–30, 2018.
+Not directly suggested.
 
-This work tried to solve the same problem with model-based (dual latent variable model) method.
+Concepts more likely consist of rules rather than definitions (Ahn & Brewer, 1993). Instead of designing the rules by hand, we intend to leverage the power of deep learning. It is known that a deep convolutional neural network trained on large-scale image dataset can provide effective features for generic tasks (Donahue et al., 2014; Razavian et al., 2014; Zeiler & Fergus, 2014).
 
 ### Q) What point is the difference between that similar work and this paper?
-[Tran and Nguyen, 2018b] is model-based, while this work is optimization-based.
+This paper introduces concept space representation for meta-learner. This can be considered as one of model-based method.
 
 ## Model
 ### Q) Which ML model did they use?
-* The baseline model is semantically conditioned LSTM (SCLSTM [Wen et al., 2015c])
-* They implemented Meta-NLG based on the PyTorch SCLSTM implementation from [Budzianowski et al., 2018].
+
+The concept generator $\mathcal{G}$, parametrized by $\theta_{\mathcal{G}}$, is a deep neural network that could be any popular convolutional neural network such as AlexNet (Krizhevsky et al., 2012), Inception (Szegedy et al., 2015), VGG (Simonyan & Zisserman, 2014), or ResNet (He et al., 2016).
+
+The meta-learner $\mathcal{M}$, parametrized by $\theta_{\mathcal{M}}$, learns to learn a learner for each task $\mathcal{T}$ based on train($\mathcal{T})$. Any existing meta-learner can be used in our framework (Vinyals et al., 2016; Ravi & Larochelle, 2017; Finn et al., 2017; Li et al., 2017; Snell et al., 2017). Matching Nets (Vinyals et al., 2016) is a non-parametric model for few-shot learning based on metric learning.
 
 ### Q) How many parameters are there?
-Unknown.
+When choosing Matching Nets as the meta-learner, the learner is a neural network with an input layer of size 2048, followed by one hidden layer of size 1024 with ReLU nonlinearities, and then an output layer of size 512. When choosing MAML or Meta-SGD as the meta-learner, the learner is a neural network with the same input layer, followed by two hidden layers of size 1024 and 512 with ReLU nonlinearities, and then an output layer of size 5.
 
 ### Q) How much was the training cost? What facilities did the authors use?
-Unknown.
+The batch size of examples for image recognition is set to 64 and the batch size of tasks is set to 4 and 2 for 1-shot and 5-shot recognition, respectively. The number of iterations is 60,000 in the experiments on MiniImagenet, Caltech-256, and CIFAR-100, and 20,000 in the experiments on CUB200.
 
 ### Q) Describe the algorithm.
+| ![algo-meta-nlg](/img/figures/zhou2018deep-running-example.png) |
+|:------------------:|
+|  *Deep Meta-Learning* |
 
-| ![algo-meta-nlg](https://github.com/laftworld/laftworld.github.io/blob/master/img/figures/r1/algorithm-meta-nlg.png?raw=true){:height="250px" width="350px"}        | ![algo-maml](https://github.com/laftworld/laftworld.github.io/blob/master/img/figures/r1/algorithm-maml.png?raw=true){:height="250px" width="350px"}           |
-|:-------------:|:-------------:|
-| *Algorithm Meta-NLG*  | *Algorithm MAML*      |
+| ![algo-meta-learning-sgd](/img/figures/zhou2018deep-algorithm-deep-meta-learning-with-meta-sgd.png){:height="250px" width="350px"} |
+|:----------------------:|
+| *Deep Meta-Learning with Meta-SGD*  |
+
 
 
 ### Q) Suggest the main formulation.
 
 $$
-\theta^{Meta} = MetaLearn(\mathcal{T}_1, \ldots, \mathcal{T}_K) = \argmax_\theta \mathbb{E}_i\mathbb{E}_{\mathcal{D}_{\mathcal{T}_i}, \mathcal{D}_{\mathcal{T}_i^{\prime}}}(f_{\theta_i^{\prime}})
-$$
-
-$$
-\theta^{\prime}_i = Adapt(\mathcal{D_{\mathcal{T}_i}, \theta}) = \theta-\alpha\nabla_\theta\mathcal{L}_{\mathcal{D}_{\mathcal{T}_i}}(f_\theta)
+\min_{\theta_{\mathcal{G}},\theta_{\mathcal{M}},\theta_{\mathcal{D}}} \mathbb{E}_{\mathcal{T}\sim p(\mathcal{T}), (\mathbf{x},\mathbf{y})\sim \mathbb{D}}\left[ J(\mathcal{L}_{\mathcal{T}}(\theta_{\mathcal{M}}, \theta_{\mathcal{G}}), \mathcal{L}_{(\mathbf{x},\mathbf{y})}(\theta_{\mathcal{D}}, \theta_{\mathcal{G}} \right]
 $$
 
 ### Q) What are the limitations of the model?
-Task-oriented dialogue is severely restricted by its definition.
+
 
 ### Q) Is the code for replication available?
 False.
 
 ### Q) What are the baseline models?
-* Scratch-NLG
-* MTL-NLG
-* Zero-NLG
-* Supervised-NLG
-* Meta-NLG (proposed)
+
+* Matching Nets
+* DEML+Matching Nets
+* MAML.
+* DEML+MAML
+* Meta-SGD
+* DEML+Meta-SGD
 
 ## Dataset
 ### Q) Which dataset is used?
-Large-scale dialog dataset (MultiWoz, [Budzianowski et al., 2018].
+For concept discrimination tasks, we perform experiments on a subset of ImageNet (Deng et al., 2009).
+
+For meta-learning tasks, we perform experiments on MiniImagenet (Vinyals et al., 2016), Caltech-256 (Griffin et al., 2007), CIFAR-100 (Krizhevsky, 2009), and CUB-200 (Wah
+et al., 2011).
 
 ### Q) How large is the dataset (w.r.t. MB and w.r.t. the number of elements)?
-305.6MB, A total of 69,607 annotated utterances are used, with 55,026, 7,291, 7,290 utterances for training, validation, and testing respectively.
+
+##### Dataset for concept discrimination.
+ImageNet-200. ImageNet(Deng et al., 2009) contains 14,197,122 images of 1,000 classes, including person, vehicle, plant, and so on. The whole dataset is too large, and so in our experiments we use a subset ImageNet-200 with 200 classes sampled from 900 classes (excluding the 100 classes used in MiniImagenet(Vinyals et al., 2016)). For images in each selected category, 90% examples are randomly chosen for training, and the remaining images are used for testing
+
+##### Dataset for Meta-learning
+
+*MiniImagenet.* The MiniImagenet dataset, first used in (Vinyals et al., 2016), consists of 60,000 color images of 100 classes, with 600 examples per class. For our experiments, we use the splits introduced by (Ravi & Larochelle, 2017). Their splits use a different set of 100 classes, which are divided into three disjoint subsets: 64 classes for metatraining, 16 classes for meta-validation, and 20 classes for meta-testing. Particularly, MiniImagenet and ImageNet-200 are mutually exclusive at class level.
+
+*Caltech-256.* The Caltech-256 dataset (Griffin et al., 2007) is a successor to the well-known dataset Caltech-101. It consists of 30,607 color images of 256 classes. We use 150,
+56, and 50 classes for meta-training, meta-validation, and meta-testing, respectively.
+
+*CIFAR-100.* The CIFAR-100 dataset (Krizhevsky, 2009) contains 60,000 32 × 32 color images of 100 classes. We use 64, 16, and 20 classes for meta-training, meta-validation,
+and meta-testing, respectively. In CIFAR-100, images are rescaled to 32 × 32. Consequently, the difficulty in recognizing different categories is greatly increased.
+
+*Caltech-UCSD Birds-200-2011 (CUB-200).* The CUB200 dataset (Wah et al., 2011) contains 11,788 color images of 200 different bird species. We use 140 classes for meta-training, 20 classes for meta-validation, and test on the remaining 40 classes. In this fine-grained dataset, subtle differences between very similar classes can hardly be recognized even by humans.
 
 ### Q) Is the dataset available in public? If yes, where can we get that?
-Yes. Currently, MultiWoz 2.1 is available. [[Link]](http://dialogue.mi.eng.cam.ac.uk/index.php/corpus/)
+It seems that all dataset are available in public.
 
 ### Q) Suggest the sample data?
-{% highlight python %}
-"SNG0827.json": {
-     "goal": {
-         "taxi": {},
-         "police": {},
-         "hospital": {},
-         "hotel": {
-             "info": {
-                 "parking": "yes",
-                 "pricerange": "moderate",
-                 "area": "north"
-             },
-             "fail_info": {
-                 "parking": "yes",
-                 "pricerange": "expensive",
-                 "area": "north"
-             },
-             "book": {
-                 "stay": "4",
-                 "day": "friday",
-                 "invalid": false,
-                 "people": "2"
-             },
-             "fail_book": {}
-         },
-         "attraction": {},
-         "train": {},
-         "message": [
-             "You are looking for a <span class='emphasis'>place to stay</span>.
-             The hotel should <span class='emphasis'>include free parking</span>
-             and should be in the <span class='emphasis'>north</span>",
-             "The hotel should be in the <span class='emphasis'>expensive</span>
-             price range",
-             "If there is no such hotel, how about one that is in the
-             <span class='emphasis'>moderate</span> price range",
-             "Once you find the <span class='emphasis'>hotel</span>
-             you want to book it for <span class='emphasis'>2 people</span>
-             and <span class='emphasis'>4 nights</span> starting from
-             <span class='emphasis'>friday</span>",
-             "Make sure you get the <span class='emphasis'>reference number</span>"
-         ],
-{% endhighlight %}
-
-
+.
 
 ## Results
 ### Q) What kind of metrics did they use?
-BLEU-4 and ERR
+Accuracy.
 
 ### Q) How good is the result?
-BLEU-4 score [Papineni et al., 2002].
-
-ERR is computed by the ratio of the sum of the number of missing and redundant slots in a generated utterance divided by the total number of slots in the DA.
+3\% - 11\% improvement for each experiment setting.
 
 ### Q) Are those metrics reasonable for this work? why is that?
-0.4365 - 0.6782 in BLUE-4
-
-23.33\% - 2.19\% in ERR
-ERR seems to be more reasonable than BLEU-4 because ERR is defined only for this domain adaptation task. However, in some situations, missing slots can be more important than redundant slots, and vice versa.
+Since the task is image recognition and all dataset are public, the metric (accuracy) is clear to be used.
 
 ### Q) What is the limitation of the results?
-* The absolute accuracy of the results does not seem high. 0.6782 (BLEU-4) is the highest.
-* The fixed number of the window in BLEU-4 could be analyzed more as an ablation study.
+* The theoretical support for the concept space does not seem to be sufficient.
+
+* The previous attempts for the same objective (i.e., to reduce the learning cost for meta-learning) were not precisely described.
+
+* Accuracy table is suggested, but the training cost comparison table is not suggested. As the authors proposed their *concept space representation* to argue that previous approaches of meta-learning feels heavy to learn many tasks.
 
 ## Further Questions
 ### Q) Has the algorithm been applied to any (NLP, vision, speech) application?
-This is an implementation of the MAML algorithm onto NLP.
+The concept of concept space might be applied to NLP tasks. There seems to such literatures (Note that the citation is 25). I couldn't find such a literature yet. Let me figure them out soon.
 
 ### Q) If so, what are the tasks that the algorithm is applied to learn from?
-Task-oriented dialogue system. Each task represents each domain (hospital, taxi, etc).
+.
+
 
 ### Q) Is any change to the algorithm needed for the (NLP, vision, speech) application?
-The original MAML algorithm is applied to the task almost directly. The only difference is the domain deals with NLP. Thus the dataset and measure are different.
+.
 
 ### Q) Is this the only way to solve the problem?
-No. Four baseline models were suggested for comparison. Moreover, I have read these two pieces of literature similar to this work.
-* **Text style manipulation:** Logeswaran, Lajanugen, Honglak Lee, and Samy Bengio. "Content preserving text generation with attribute controls." Advances in Neural Information Processing Systems. 2018.
-* **Text content manipulation:** Wang, Wentao, et al. "Toward Unsupervised Text Content Manipulation." arXiv preprint arXiv:1901.09501 (2019).
-
+.
 
 ### Q) Is the work applicable to the Question Answering task?
-Domain-specific words in this work might be redefined as each speaker's context. Then the task would be regarded as each term of narration, which is needed to converge in a few shots onto the context of the speaker on the context of speakers.
+.
