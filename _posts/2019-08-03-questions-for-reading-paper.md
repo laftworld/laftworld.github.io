@@ -17,7 +17,7 @@ categories: research
 ###### Q) Citation
 
 #### Motivation
-###### Q) What is the domain this paper is in?
+###### Q) What is the domain this paper is belong to?
 ###### Q) What is the desired task?
 ###### Q) Suggest the running example. What is the main point of the task?
 ###### Q) What is the limitation of the previous works?

@@ -18,19 +18,14 @@ As a researcher, I try to solve problems in Natural Language Processing (NLP) to
 [[Facebook]: Personal (English)](https://www.facebook.com/eric.hong.9066)
 [[Google site]: Official (English)](https://sites.google.com/view/woneuihong)
 [[Naver blog]: Traveler's life (Korean)](https://blog.naver.com/laftworld)
-[[T story blog]: Researcher's life (Korean)](https://learningengineer.tistory.com/)
-[[Youtube]: VLog (under construction)](https://www.youtube.com/watch?v=_clAIridH4o&list=PLEkZgsocS9J3fOltTA4DRK1HyM9IYAhI2)
-
-### On-going projects
-[LAN-wired online lecture series](https://docs.google.com/spreadsheets/d/1zg3t9jDFoAsQ1aFDJNPNALtUCLk0j69rSLyqh8oSVVw/edit?usp=sharing)
-[Online-supervising](https://docs.google.com/document/d/13VahrtFruHjbEyEE2uhG7fJ35KqSUu-kC_6c_W4Su5M/edit)
-[Manual](https://docs.google.com/document/d/1gpEqopJvlz1dWFs3HuJPGfUebBuICl2hjdS9Qhbh17M/edit?usp=sharing)
-[One-page machine learning (offline lecture)](https://docs.google.com/presentation/d/1BY9dkvaoduXpSp8C7QnIFCRFmruRAfc6IlUEiGW2rNU/present?slide=id.g4d36786b5c_2_300)
+<!--- [[T story blog]: Researcher's life (Korean)](https://learningengineer.tistory.com/)
+[[Youtube]: VLog (under construction)](https://www.youtube.com/watch?v=_clAIridH4o&list=PLEkZgsocS9J3fOltTA4DRK1HyM9IYAhI2) --->
 
 ### Partners
-[DPlus](http://www.dplus.company/)
-[NOTA](http://nota.ai/)
+<!--- [DPlus](http://www.dplus.company/)
 
+[NOTA](http://nota.ai/)
+--->
 
 ### Contacts
 [E-mail](mailto:wehong@cse.ust.hk)
