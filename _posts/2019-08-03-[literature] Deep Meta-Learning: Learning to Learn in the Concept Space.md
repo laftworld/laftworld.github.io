@@ -116,6 +116,7 @@ When choosing Matching Nets as the meta-learner, the learner is a neural network
 The batch size of examples for image recognition is set to 64 and the batch size of tasks is set to 4 and 2 for 1-shot and 5-shot recognition, respectively. The number of iterations is 60,000 in the experiments on MiniImagenet, Caltech-256, and CIFAR-100, and 20,000 in the experiments on CUB200.
 
 ### Q) Describe the algorithm.
+
 | ![algo-meta-nlg](/img/figures/zhou2018deep-running-example.png) |
 |:------------------:|
 |  *Deep Meta-Learning* |
@@ -182,7 +183,7 @@ It seems that all dataset are available in public.
 Accuracy.
 
 ### Q) How good is the result?
-3\% - 11\% improvement for each experiment setting.
+3% - 11% improvement for each experiment setting.
 
 ### Q) Are those metrics reasonable for this work? why is that?
 Since the task is image recognition and all dataset are public, the metric (accuracy) is clear to be used.
