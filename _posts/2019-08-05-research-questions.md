@@ -15,7 +15,7 @@ categories: research
 
 ##### Q1) Why do we need this research? How are human language utterance, intention, and context represented computationally? How did the previous research do? What are the limitations of previous research? How can they be supplemented? How can the effectiveness of the proposed method be proved? What is the contribution of this research?
 
-##### Q2) How can Q1 be applied in QA as Information Retrieval?
+##### Q2) How can the questions in Q1 be applied to QA as Information Retrieval?
 
 
 ### Conference Level Objective: high-quality sentence generation in QA as a single-turn IR task for educational purpose.
@@ -31,6 +31,7 @@ categories: research
 ##### Q3) How large does the training cost? Is there any previous research which tries to reduce the training cost?
 
 ##### Q4) Consider each of the set of appropriate answers from _system_ as each task in MAML, and consider each of a question from _user_ as a one-shot training sample. Can MAML be applied to specify the set of appropriate answers as IR task?
+
 
 
 
