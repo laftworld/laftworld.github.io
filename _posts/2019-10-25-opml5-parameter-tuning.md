@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Optimization"
+title: "Parameter tuning"
 date: 2019-10-25 22:48:00 +0800
 categories: one-page-learning
 ---
@@ -11,14 +11,14 @@ Each figure shows a decision boundary of classifying blue and red dots. The deci
 
 For supervised learning, the dataset is usually represented as $$\mathcal{D} = \{(\mathbf{x}^{(\ell)}, y^{(\ell)})\}_{\ell=1}^N$$. $$\mathbf{x}$$ is bold because it represents a vector, and $$\ell$$ is to count each datapoint (i.e., there are N data points).
 
-The total error $$L$$ for a batch is a sum of loss $$\mathcal{L}$$ for each datapoint. Note that $$\phi(\mathbf{x}^{\ell})$$ is a predicted value of $$\mathbf{x}^{(\ell)}$$. Here $$\phi$$ represents a model, and $$\theta$$ represents parameters in a model.
+The total loss $$L$$ for a batch is a sum of loss $$\mathcal{L}$$ for each datapoint. Note that $$\phi(\mathbf{x}^{\ell})$$ is a predicted value of $$\mathbf{x}^{(\ell)}$$. Here $$\phi$$ represents a model, and $$\theta$$ represents parameters in a model.
 
 ***Symbols***
 
-$$\theta^0$$
+$$\theta^0$$: unlearned parameters.
 
-$$\theta^*$$
+$$\theta^*$$: learned parameters (i.e., optimized parameters)
 
-$$L = \sum_{\ell=1}^N \mathcal{L}(\phi(\mathbf{x}^{(\ell)}), y^{(\ell)})>\epsilon$$
+$$L = \sum_{\ell=1}^N \mathcal{L}(\phi(\mathbf{x}^{(\ell)}), y^{(\ell)})>\epsilon$$: Loss is larger than certain threshold $$\epsilon$$
 
-$$L = \sum_{\ell=1}^N \mathcal{L}(\phi(\mathbf{x}^{(\ell)}), y^{(\ell)})<\epsilon$$
+$$L = \sum_{\ell=1}^N \mathcal{L}(\phi(\mathbf{x}^{(\ell)}), y^{(\ell)})<\epsilon$$: Loss is larger than certain threshold $$\epsilon$$
